@@ -15,7 +15,7 @@ Cada prescripción es un **snapshot inmutable**:
 - **Frontend:** React + TypeScript + TailwindCSS + Vite
 - **Backend:** Node.js + Express + TypeScript
 - **Base de datos:** MongoDB + Mongoose
-- **Auth:** JWT (roles: médico y paciente)
+- **Auth:** JWT (roles: médico )
 - **Validación:** Zod
 
 ## Estructura

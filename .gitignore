@@ -1,0 +1,5 @@
+node_modules/
+dist/
+# .env (Uncommented as per user request to include it in git)
+*.log
+.DS_Store

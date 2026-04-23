@@ -13,6 +13,7 @@ export interface IPrescripcion extends Document {
   pacienteId: mongoose.Types.ObjectId;
   prescripcionAnteriorId?: mongoose.Types.ObjectId | null;
   motivoCambio?: string | null;
+  indicaciones?: string | null;
   activa: boolean;
   fechaCreacion: Date;
 }
@@ -39,6 +40,7 @@ const PrescripcionSchema = new Schema<IPrescripcion>(
     pacienteId: { type: Schema.Types.ObjectId, ref: 'Paciente', required: true },
     prescripcionAnteriorId: { type: Schema.Types.ObjectId, ref: 'Prescripcion', default: null },
     motivoCambio: { type: String, default: null, trim: true },
+    indicaciones: { type: String, default: null, trim: true },
     activa: { type: Boolean, default: true },
     fechaCreacion: { type: Date, default: Date.now, immutable: true },
   },

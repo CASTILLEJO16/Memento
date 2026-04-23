@@ -20,6 +20,7 @@ export interface Medico {
   _id: string;
   nombre: string;
   especialidad: string;
+  cedula?: string;
   usuarioId: string;
   createdAt: string;
   updatedAt: string;
@@ -39,6 +40,7 @@ export interface Prescripcion {
   pacienteId: Paciente | string;
   prescripcionAnteriorId?: Prescripcion | string | null;
   motivoCambio?: string | null;
+  indicaciones?: string | null;
   activa: boolean;
   fechaCreacion: string;
   createdAt: string;
@@ -102,6 +104,7 @@ export interface CrearPrescripcionData {
   pacienteId: string;
   prescripcionAnteriorId?: string | null;
   motivoCambio?: string | null;
+  indicaciones?: string | null;
 }
 
 export interface NuevaPrescripcionAlergiaData extends CrearPrescripcionData {

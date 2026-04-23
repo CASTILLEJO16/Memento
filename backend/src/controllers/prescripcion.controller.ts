@@ -51,6 +51,7 @@ export const crearPrescripcion = async (req: Request, res: Response): Promise<vo
       pacienteId: req.body.pacienteId,
       prescripcionAnteriorId: req.body.prescripcionAnteriorId || null,
       motivoCambio: req.body.motivoCambio || null,
+      indicaciones: req.body.indicaciones || null,
       activa: true,
     });
 
@@ -117,6 +118,7 @@ export const nuevaPrescripcionPorAlergia = async (req: Request, res: Response): 
       pacienteId: req.body.pacienteId,
       prescripcionAnteriorId: req.body.prescripcionAnteriorId,
       motivoCambio: req.body.motivoCambio,
+      indicaciones: req.body.indicaciones || null,
       activa: true,
     });
 

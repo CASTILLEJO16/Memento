@@ -3,7 +3,19 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { prescripcionesAPI } from '../api/services';
 import { Prescripcion, Paciente, HistorialResponse } from '../types';
 import { useAuth } from '../context/AuthContext';
-import { ClipboardList, Clock, ArrowRight, GitBranch, AlertTriangle, User, ChevronLeft, ArrowDown, Calendar, Activity, Printer } from 'lucide-react';
+import { 
+  ClipboardList, 
+  Clock, 
+  ArrowRight, 
+  GitBranch, 
+  AlertTriangle, 
+  User, 
+  ChevronLeft, 
+  ArrowDown, 
+  Calendar, 
+  Activity, 
+  Printer 
+} from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -114,7 +126,7 @@ const HistorialPage: React.FC = () => {
       </div>
 
       {paciente && paciente.alergias.length > 0 && (
-        <Card variant="warning" className="bg-red-50 border-red-100 p-5 flex items-start gap-4">
+        <Card className="bg-red-50 border-red-100 p-5 flex items-start gap-4">
           <div className="p-2 bg-white rounded-xl shadow-sm">
             <AlertTriangle className="w-5 h-5 text-red-600" />
           </div>

@@ -46,6 +46,7 @@ const NuevaPrescripcionPage: React.FC = () => {
     pacienteId: pacienteIdQuery || '',
     prescripcionAnteriorId: null,
     motivoCambio: null,
+    indicaciones: '',
   });
 
   useEffect(() => {
@@ -247,6 +248,17 @@ const NuevaPrescripcionPage: React.FC = () => {
                 <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm font-bold text-gray-400">Días</span>
               </div>
             </div>
+          </div>
+
+          {/* Indicaciones Especiales */}
+          <div className="space-y-1.5">
+            <label className="block text-sm font-semibold text-gray-700 ml-1">Indicaciones Especiales (Opcional)</label>
+            <textarea
+              value={form.indicaciones || ''}
+              onChange={(e) => handleChange('indicaciones', e.target.value)}
+              className="input-field min-h-[80px] py-3"
+              placeholder="Ej: Tomar después de los alimentos, evitar lácteos..."
+            />
           </div>
 
           {error && (
